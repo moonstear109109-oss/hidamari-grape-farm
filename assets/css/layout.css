@@ -1,0 +1,109 @@
+/************************************ページ全体の構造********************************/
+
+/*header*/
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header__container {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.header__logo {
+    width: 20%;
+}
+
+.header__nav {
+    margin-left: auto;
+    font-size: 1.4rem;
+    color: var(--c-white);
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 40px
+    
+}
+
+/*headerスクロール時の帯*/
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92px;
+    background:rgba(255, 255, 255, 0.75);
+    background:rgba(225, 232, 220, 0.9);
+
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+
+    z-index: 0;
+}
+
+/*スクロール時*/
+
+.header.is-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header.is-scrolled::before {
+    transform: translateY(0);
+}
+
+.header.is-scrolled .header__container {
+    height: 92px;
+}
+
+.header.is-scrolled .header__nav a {
+    color: var(--c-black);
+}
+
+.header__item a {
+    position: relative;
+}
+
+/*マウスを乗せた時の下線*/
+.header__item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -76px;
+    width: 0;
+    height: 2px;
+    background-color: var(--c-white);
+    transition: width 0.3s ease;
+}
+
+.header__item a:hover::after {
+    width: 100%;
+}
+
+.header.is-scrolled .header__item a::after {
+    background-color: #6B4A6E;
+    bottom: -37px;
+}
+
+/*main*/
+
+
+/*section の余白*/
+
+
+/*footer*/

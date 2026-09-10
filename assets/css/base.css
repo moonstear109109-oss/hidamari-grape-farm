@@ -1,0 +1,33 @@
+
+/*フォント*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: var(--c-black);
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+}
+
+/*色の変数*/
+
+:root {
+    --c-black: #333333;
+    --c-white: #ffffff;
+    --c-main: #4f3450;
+    --c-sub: ;
+    --c-bg: ;
+}
+
+
+
+
+/*余白のルール*/
+
+
+/*body の基本設定*/

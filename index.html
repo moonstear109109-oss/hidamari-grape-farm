@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ひだまりブドウ園 | コーディング模写</title>
+
+    <meta name="description" content="ポートフォリオ用に制作した『ひだまり農園』のコーディング模写サイトです。HTML・CSSを用いてレスポンシブ対応で実装しています。">
+
+    <link rel="stylesheet" href="assets/css/reseter.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/top.css">
+
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            
+                <a href="#" class="header__logo">
+                    <img src="assets/images/common/logo-cutout.png" alt="ひだまりブドウ農園">
+                </a>
+
+                <!-- ハンバーガー -->
+                <button class="hamburger sp_only" aria-label="menu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!--ナビゲーション-->
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__item">
+                            <a href="#">ホーム</a>
+                        </li>
+                    
+                        <li class="header__item">
+                            <a href="#">農園について</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="#">ブドウ品種</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="#">ブドウ狩り</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="#">アクセス</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="#">ブログ</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="#">お問い合わせ</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            
+        </div>   
+
+    </header>
+
+    <main>
+        <section class="mv">
+            <div class="mv__image">
+                <img src="assets/images/top/grape-fv.png" alt="ひだまりブドウ農園">
+                <img src="assets/images/top/grapes.png" alt="ひだまりブドウ農園のブドウ">
+            </div>
+
+            <div class="mv__content">
+                <img src="assets/images/common/logo-cutout.png" alt="ひだまりブドウ農園" class="mv__logo">
+                <img src="assets/images/top/grape_vine_circle-cutout.png" alt="ひだまりブドウ農園のブドウの木" class="mv__illustration">
+            </div>
+        
+            <!--スクロール案内とページネーション-->
+            <div class="mv__navigation">
+                <a href="#" class="mv__scroll">
+                    <span class="mv__scroll-arrow" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="mv__scroll-text">Scroll</span>
+                </a>
+
+                <div class="mv__pagination" aria-label="スライドのページ位置">
+                    <span class="mv__pagination-dot"></span>
+                    <span class="mv__pagination-dot"></span>
+                </div>               
+            </div>     
+        </section>
+
+        <!-- 右側固定ボタン -->
+        <div class="side-buttons">
+            <a href="#" class="side-buttons__item side-buttons__item--reserve">
+                <img src="assets/images/common/glape_btn-cutout.png" alt="ブドウ狩り予約">
+            </a>
+            <a href="#" class="side-buttons__item side-buttons__item--shop">
+                <img src="assets/images/common/online_btn-cutout.png" alt="オンラインショップ">
+            </a>
+        </div>
+
+        <section id="#" class="farm-guide"> <!--次のセクション-->
+            <div class="farm-guide__inner">
+
+                <div class="farm-guide__heading">
+                    <p class="farm-guide__heading-en">
+                        ENJOY HIDAMARI FARM
+                    </p>
+                    <h2 class="farm-guide__title">
+                        ひだまり農園を楽しむ
+                    </h2>
+                    <p class="farm-guide__lead">
+                        自然の恵みと、優しい時間を
+                    </p>
+                </div>
+
+                <div class="farm-guide__list">
+                    <!--ブドウ狩り-->
+                    <a href="#" class="farm-guide__card">
+                        <div class="farm-guide__image">
+                            <img src="assets/images/top/card-grape-picking.png" alt="ブドウ狩りを楽しむ様子">
+                        </div>
+                        
+                        <div class="farm-guide__body">
+                            <img src="assets/images/top/icon-grape-picking.png" alt="" class="farm-guide__icon">
+                            <h3 class="farm-guide__card-title">
+                                ブドウ狩り
+                            </h3>
+                            <p class="farm-guide__text">
+                                家族みんなで、旬の美味しさを楽しめるブドウ狩りをご案内します。
+                            </p>
+
+                            <span class="farm-guide__link">
+                                予約する　→
+                            </span>
+                        </div>
+                    </a>
+
+                    <!--オンラインショップ-->
+                    <a href="#" class="farm-guide__card">
+                        <div class="farm-guide__image">
+                            <img src="assets/images/top/card-online-shop-grapes.png" alt="箱に入ったブドウ">
+                        </div>
+                        <div class="farm-guide__body">
+                            <img src="assets/images/top/icon-online-shop.png" alt=""  class="farm-guide__icon">
+                            <h3 class="farm-guide__card-title">
+                                オンラインショップ
+                            </h3>
+                            <p class="farm-guide__text">
+                                農園で育てた旬のブドウを、ご自宅や大切な方への贈り物に
+                            </p>
+                            <span class="farm-guide__link">
+                                購入する　→
+                            </span>
+                        </div>
+                    </a>
+
+                    <!--ブドウ品種-->
+                    <a href="#" class="farm-guide__card">
+                        <div class="farm-guide__image">
+                            <img src="assets/images/top/card-grape-varieties.png" alt="さまざまな種類のブドウ">
+                        </div>
+                        <div class="farm-guide__body">
+                                <img src="assets/images/top/icon-grape-varieties.png" alt="" class="farm-guide__icon">
+                            <h3 class="farm-guide__card-title">
+                                ブドウ品種
+                            </h3>
+                            <p class="farm-guide__text">
+                                シャインマスカットや巨峰など、農園で育てている品種をご紹介します。
+                            </p>
+                            <span class="farm-guide__link">
+                                品種を見る　→
+                            </span>
+                        </div>
+                    </a>
+                
+                </div>
+            </div>                  
+        </section>
+
+        <div style="height: 1500px;"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
