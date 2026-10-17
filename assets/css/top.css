@@ -626,8 +626,10 @@
 /* =================================
     grapes-kinds
 ================================= */
+
 .grapes-kinds {
-    padding: 80px 24px 40px;
+    background-color: #f4f0f7;
+    padding: 80px 24px;
 }
 
 .grapes-kinds__inner {
@@ -698,6 +700,76 @@
 .grapes-kinds__season {
     margin-top: auto;
     padding-top: 24px;
+}
+
+/* =================================
+    ACCESS
+================================= */
+
+.access {
+    background-color: #f1f5ec;
+    padding: 80px 24px;
+    scroll-margin-top: 120px;
+}
+
+.access__inner {
+    width: min(960px, 100%);
+    margin-inline: auto;
+}
+
+.access__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.access__en-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    color: var(--c-main);
+    margin-bottom: 8px;
+}
+
+.access__title {
+    font-size: clamp(2.4rem, 3vw, 3.4rem);
+    color: var(--c-main);
+}
+
+.access__contents {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 48px;
+}
+
+.access__map {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.access__name {
+    font-size: 2.4rem;
+    color: var(--c-main);
+    margin-bottom: 24px;
+}
+
+.access__info-row {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.access__info-row dt {
+    font-weight: 600;
+    color: var(--c-main);
+}
+
+.access__info-row dd {
+    margin: 0;
+    line-height: 1.8;
 }
 
 /* =================================
