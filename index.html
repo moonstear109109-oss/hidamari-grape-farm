@@ -29,12 +29,18 @@
                 </a>
 
                 <!-- ハンバーガー -->
-                <button class="hamburger sp_only" aria-label="menu">
-                    <span></span><span></span><span></span>
+                <button class="hamburger sp_only"  
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-expanded="false"
+                    aria-controls="global-nav">                
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
 
                 <!--ナビゲーション-->
-                <nav class="header__nav">
+                <nav class="header__nav" id="global-nav">
                     <ul class="header__nav-list">
                         <li class="header__item">
                             <a href="#">ホーム</a>
@@ -49,20 +55,21 @@
                         </li>
 
                         <li class="header__item">
-                            <a href="#access">ブドウ狩り</a>
+                            <a href="#grape-picking">ブドウ狩り</a>
                         </li>
 
                         <li class="header__item">
                             <a href="#access">アクセス</a>
                         </li>
 
+                        <!-- コメントアウト中
                         <li class="header__item">
                             <a href="#">ブログ</a>
                         </li>
 
                         <li class="header__item">
                             <a href="#">お問い合わせ</a>
-                        </li>
+                        </li>-->
 
                     </ul>
                 </nav>
@@ -74,8 +81,8 @@
     <main>
         <section class="mv">
             <div class="mv__image">
-                <img src="assets/images/top/grape-fv.png" alt="ひだまりブドウ農園">
-                <img src="assets/images/top/grapes.png" alt="ひだまりブドウ農園のブドウ">
+                <img src="assets/images/top/grape-fv.webp" alt="ひだまりブドウ農園">
+                <img src="assets/images/top/grapes.webp" alt="ひだまりブドウ農園のブドウ">
             </div>
 
             <div class="mv__content">
@@ -102,12 +109,12 @@
 
         <!-- 右側固定ボタン -->
         <div class="side-buttons">
-            <a href="#" class="side-buttons__item side-buttons__item--reserve">
+            <div class="side-buttons__item side-buttons__item--reserve">
                 <img src="assets/images/common/glape_btn-cutout.png" alt="ブドウ狩り予約">
-            </a>
-            <a href="#" class="side-buttons__item side-buttons__item--shop">
+            </div>
+            <div class="side-buttons__item side-buttons__item--shop">
                 <img src="assets/images/common/online_btn-cutout.png" alt="オンラインショップ">
-            </a>
+            </div>
         </div>
 
         <section id="#" class="farm-guide"> <!--次のセクション-->
@@ -125,11 +132,11 @@
                     </p>
                 </div>
 
-                <div class="farm-guide__list">
+                <div class="farm-guide__list"> 
                     <!--ブドウ狩り-->
-                    <a href="#" class="farm-guide__card">
+                    <div class="farm-guide__card"  id="grape-picking">
                         <div class="farm-guide__image">
-                            <img src="assets/images/top/card-grape-picking.png" alt="ブドウ狩りを楽しむ様子">
+                            <img src="assets/images/top/card-grape-picking.webp" alt="ブドウ狩りを楽しむ様子">
                         </div>
                         
                         <div class="farm-guide__body">
@@ -142,15 +149,15 @@
                             </p>
 
                             <span class="farm-guide__link">
-                                予約する　→
+                                予約する　→ 
                             </span>
                         </div>
-                    </a>
+                    </div>
 
                     <!--オンラインショップ-->
-                    <a href="#" class="farm-guide__card">
+                    <div class="farm-guide__card">
                         <div class="farm-guide__image">
-                            <img src="assets/images/top/card-online-shop-grapes.png" alt="箱に入ったブドウ">
+                            <img src="assets/images/top/card-online-shop-grapes.webp" alt="箱に入ったブドウ">
                         </div>
                         <div class="farm-guide__body">
                             <img src="assets/images/top/icon-online-shop.png" alt=""  class="farm-guide__icon">
@@ -164,12 +171,12 @@
                                 購入する　→
                             </span>
                         </div>
-                    </a>
+                    </div>
 
                     <!--ブドウ品種-->
                     <a href="#grapes" class="farm-guide__card">
                         <div class="farm-guide__image">
-                            <img src="assets/images/top/card-grape-varieties.png" alt="さまざまな種類のブドウ">
+                            <img src="assets/images/top/card-grape-varieties.webp" alt="さまざまな種類のブドウ">
                         </div>
                         <div class="farm-guide__body">
                                 <img src="assets/images/top/icon-grape-varieties.png" alt="" class="farm-guide__icon">
@@ -235,7 +242,7 @@
             <div class="about__inner">
 
                 <!--ツタの装飾-->
-                <img src="assets/images/top/about-vine.png" alt="" class="about__vine">
+                <img src="assets/images/top/about-vine.webp" alt="" class="about__vine">
     
                 
                 <!-- 農園の紹介 -->
@@ -251,17 +258,17 @@
                     </div>
                     <div class="about__contents">
                         <div class="about__img">
-                            <img src="assets/images/top/about-family.png" alt="家族でブドウ狩り">
+                            <img src="assets/images/top/about-family.webp" alt="家族でブドウ狩り">
                         </div>
                         <div class="about__body">
                             <h3 class="about__subtitle">
-                                ひと房からはじまる、家族の思い出。
+                                ひと房からはじまる、<br class="sp-only">家族の思い出。
                             </h3>
                             <p class="about__text">
-                                ひだまりブドウ農園は、家族で営む小さな農園です。<br>
-                                自然の恵みを大切にしながら、旬の美味しいブドウを育てています。<br>
-                                自分でブドウを選び、収穫する。<br>
-                                そのひとときが、家族みんなの思い出となりますように。
+                                ひだまりブドウ農園は、家族で営む小さな農園です。
+                                自然の恵みを大切にしながら、旬の美味しいブドウを育てています。
+                                自分でブドウを選び、収穫する。
+                                そのひとときが、家族みんなの思い出と<br class="sp-only">なりますように。
                             </p>
                         </div>
                     </div>
@@ -341,7 +348,7 @@
 
                     <!--キッズスペース　画像-->
                     <div class="about__kids-image">
-                        <img src="assets/images/top/about-child.png" alt="農園のキッズスペース">
+                        <img src="assets/images/top/about-child.webp" alt="農園のキッズスペース">
                     </div>
                 </div>
 
@@ -365,7 +372,7 @@
                     <!--巨峰-->
                     <div class="grapes-kinds__card">
                         <div class="grapes-kinds__image">
-                            <img src="assets/images/top/grape-kyoho.png " alt="巨峰">
+                            <img src="assets/images/top/grape-kyoho.webp " alt="巨峰">
                         </div>
 
                         <div class="grapes-kinds__body">
@@ -384,7 +391,7 @@
                     <!--シャインマスカット-->
                     <div class="grapes-kinds__card">
                         <div class="grapes-kinds__image">
-                            <img src="assets/images/top/grape-shine-muscat.png" alt="シャインマスカット">
+                            <img src="assets/images/top/grape-shine-muscat.webp" alt="シャインマスカット">
                         </div>
 
                         <div class="grapes-kinds__body">
@@ -403,7 +410,7 @@
                     <!--ピオーネ-->
                     <div class="grapes-kinds__card">
                         <div class="grapes-kinds__image">
-                            <img src="assets/images/top/grape-pione.png " alt="ピオーネ">
+                            <img src="assets/images/top/grape-pione.webp" alt="ピオーネ">
                         </div>
 
                         <div class="grapes-kinds__body">
@@ -438,7 +445,7 @@
 
                 <div class="access__contents">
                     <div class="access__map">
-                        <img src="assets/images/top/access-map.png" alt="ひだまりブドウ農園の案内マップ">
+                        <img src="assets/images/top/access-map.webp" alt="ひだまりブドウ農園の案内マップ">
                     </div>
 
                     <div class="access__body">

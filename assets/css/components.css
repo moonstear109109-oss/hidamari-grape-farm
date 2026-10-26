@@ -42,3 +42,28 @@
 
 
 /*セクションタイトル*/
+
+
+@media (max-width: 768px) {
+    .side-buttons {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        right: 12px;
+        transform: none;
+        width: 58px;
+        gap: 8px;
+        z-index: 90;
+    }
+
+    .side-buttons__item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* メニューを開いている間は固定ボタンを隠す */
+    body:has(.header.is-menu-open) .side-buttons {
+        visibility: hidden;
+    }
+}

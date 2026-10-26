@@ -247,7 +247,7 @@
     background-color: #fffdf8;
 }
 
-.farm-guide_inner {
+.farm-guide__inner {
     width: min(1120px, 100%);
     margin-inline: auto;
 }
@@ -302,7 +302,7 @@
         box-shadow 0.3s ease;
 }
 
-.farm-guide__card:hover {
+a.farm-guide__card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -322,7 +322,7 @@
     transition: transform 0.5s ease;
 }
 
-.farm-guide__card:hover .farm-guide__image img {
+a.farm-guide__card:hover .farm-guide__image img {
     transform: scale(1.04);
 }
 
@@ -650,7 +650,7 @@
     color: var(--c-main);
 }
 
-.grape-kinds__title {
+.grapes-kinds__title {
     font-size: 32px;
 }
 
@@ -701,6 +701,7 @@
     margin-top: auto;
     padding-top: 24px;
 }
+
 
 /* =================================
     ACCESS
@@ -843,11 +844,60 @@
     margin-top: 4px;
 }
 
+.sp-only {
+    display: none;
+}
+
 
 /* =================================
     Tablet / Smartphone
 ================================= */
 @media(max-width: 768px){
+    .sp-only {
+        display: inline;
+    }
+
+    .header__container {
+        background-color: rgba(241, 245, 236, 0.92);
+        }
+
+    .mv {
+        height: 100svh;
+        min-height: 560px;
+    }
+
+    .mv::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.12);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .mv__content {
+        width: 75%;
+        top: 48%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .mv__illustration {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mv__logo {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+    }
+
+    .mv__image img {
+        object-position: center;
+    }
+
     .farm-guide {
         padding: 72px 20px;
     }
@@ -863,6 +913,10 @@
 
     .farm-guide__body {
         padding: 28px 24px;
+    }
+
+    .side-buttons {
+        display: none;
     }
 
 
@@ -884,9 +938,156 @@
         text-align: left;
     }
 
+    /*about*/
+    .about {
+        padding: 56px 20px 64px;
+        overflow: hidden;
+        scroll-margin-top: 120px;
+    }
+
+    /*ツタの装飾*/
+    .about__vine {
+        width: 180px;
+        right: -20px;
+        top: -40px;
+    }
+
+      /* 農園紹介 */
+    .about__intro {
+        margin-bottom: 56px;
+    }
+
+    .about__heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 28px;
+    }
+
+    .about__title {
+        font-size: 2.2rem;
+        line-height: 1.5;
+    }
+
+    .about__subtitle {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+
+    .about__contents {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about__img {
+        flex: none;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .about__img img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .about__body {
+        flex: none;
+        width: 100%;
+    }
+
+    .about__subtitle {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .about__text {
+        font-size: 1.4rem;
+        line-height: 1.9;
+    }
+
+    /* 3つの特徴 */
+    .about__features-title {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .about__features-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about__feature-card {
+        padding: 28px 24px;
+    }
+
+    .about__feature-image {
+        margin-bottom: 12px;
+    }
+
+    .about__feature-image img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .about__feature-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .about__feature-text {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    /* キッズスペース */
+    .about__kids {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        margin-top: 64px;
+    }
+
+    .about__kids-body,
+    .about__kids-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .about__kids-body > .about__en-title,
+    .about__kids-title {
+        text-align: center;
+    }
+
+    .about__kids-title {
+        font-size: 2.4rem;
+        margin-bottom: 24px;
+    }
+
+    .about__kids-subtitle {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+
+    .about__kids-text {
+        font-size: 1.4rem;
+        line-height: 1.9;
+    }
+
+    .about__kids-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
     /*grapes-kinds*/
 
     /*カード一覧*/
+    .grapes-kinds {
+        padding: 48px 24px 64px;
+    }
+
     .grapes-kinds__list {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -899,6 +1100,53 @@
         padding: 48px 20px;
     }
 
+    .grapes-kinds__title {
+        font-size: 2.2rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .grapes-kinds__heading {
+        margin-bottom: 32px;
+    }
+
+    /*access*/
+    .access {
+        padding: 48px 24px 64px;
+        scroll-margin-top: 100px;
+    }
+
+    .access__heading {
+        margin-bottom: 32px;
+    }
+
+    .access__contents {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .access__map img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .access__name {
+        font-size: 2rem;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .access__info-row {
+        grid-template-columns: 80px minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px 0;
+        font-size: 1.4rem;
+    }
+
+    /*footer*/
+
     .footer__nav-list {
         justify-content: center;
         gap: 16px 24px;
@@ -908,4 +1156,18 @@
         width: 140px;
     }
 
+    .footer__nav-list {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        gap: 16px 32px;
+    }
+
+}
+
+/* タブレット：ブドウ品種の説明文を中央寄せ */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grapes-kinds__card-text {
+        text-align: center;
+    }
 }
